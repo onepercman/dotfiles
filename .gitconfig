@@ -1,0 +1,8 @@
+[user]
+	name = Tony Weird
+	email = tonywei.weird@gmail.com
+
+[includeIf "gitdir:~/onepercman/"]
+    path = ~/.gitconfig-onepercman
+
+
