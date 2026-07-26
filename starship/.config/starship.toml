@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = false
-palette = "dragon"
+palette = "nord"
 
 format = """
 [](gray_1)\
@@ -22,7 +22,7 @@ $cmd_duration\
 $character\
 """
 
-[palettes.dragon]
+[palettes.nord]
 # grayscale prompt shell
 gray_1 = "#F0F0F0"
 gray_2 = "#B0B0B0"
@@ -30,16 +30,16 @@ gray_3 = "#707070"
 docker_blue = "#1D63ED"
 ink = "#0A0A0A"
 ink_soft = "#111111"
-# kanagawa-dragon ANSI palette, same hex Ghostty renders for this theme
-green = "#87A987"     # ANSI 10 bright green (success)
-yellow = "#C4B28A"    # ANSI 3 yellow
-aqua = "#7AA89F"      # ANSI 14 bright cyan
-red = "#E46876"       # ANSI 9 bright red (error)
-red_deep = "#C4746E"  # ANSI 1 red
-blue = "#7FB4CA"      # ANSI 12 bright blue
-violet = "#938AA9"    # ANSI 13 bright magenta
-gold = "#E6C384"      # ANSI 11 bright yellow
-pink = "#A292A3"      # ANSI 5 magenta
+# nord ANSI palette, same hex Ghostty renders for this theme
+green = "#A3BE8C"     # ANSI 10 bright green (success)
+yellow = "#EBCB8B"    # ANSI 3 yellow
+aqua = "#88C0D0"      # ANSI 14 bright cyan
+red = "#BF616A"       # ANSI 9 bright red (error)
+red_deep = "#A54F5A"  # ANSI 1 red
+blue = "#81A1C1"      # ANSI 12 bright blue
+violet = "#B48EAD"    # ANSI 13 bright magenta
+gold = "#D08770"      # ANSI 11 bright yellow (nord has no second yellow, use aurora orange)
+pink = "#B48EAD"      # ANSI 5 magenta
 # official brand colors — runtime pills
 node_green = "#215732"
 bun_black = "#000000"

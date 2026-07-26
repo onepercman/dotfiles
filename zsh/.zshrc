@@ -75,7 +75,7 @@ fi
 
 # ── Completion styling ───────────────────────────────────────────────────────
 # Reuses $LS_COLORS above, so completion menu colors match `ls` output —
-# both ride Ghostty's kanagawa-dragon ANSI palette, no hardcoded hex needed.
+# both ride Ghostty's Nord ANSI palette, no hardcoded hex needed.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case-insensitive
 zstyle ':completion:*' menu select                          # arrow-key select
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"     # colorize list

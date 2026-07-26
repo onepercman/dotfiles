@@ -9,7 +9,7 @@ font-thicken-strength = 50
 macos-titlebar-style = hidden
 window-padding-x = 10
 window-padding-y = 10
-theme = Kanagawa Dragon
+theme = Nord
 font-synthetic-style = true
 window-vsync = true
 

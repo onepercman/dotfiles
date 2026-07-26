@@ -15,7 +15,7 @@ Personal macOS development environment using **GNU Stow** for dotfiles managemen
 - 🤖 **Ollama** — local LLM inference (Qwen3 8B)
 - 🐙 **GitHub CLI** — GitHub workflows from the terminal
 - 🐙 **lazygit** — terminal UI for git, standalone or inside Neovim (`<leader>gg`)
-- 📁 **superfile** — terminal file manager (Kanagawa Dragon theme)
+- 📁 **superfile** — terminal file manager (Nord theme)
 - 📊 **btop** — resource monitor (CPU, memory, disks, network, processes)
 
 ## Quick Start
@@ -100,11 +100,11 @@ Workspaces: **work** (Ghostty, auto-assigned), **entertain** (default, Safari au
 
 ### Neovim
 
-LazyVim defaults. Custom: `kanagawa-dragon` colorscheme (transparent), biome formatter (JS/TS/CSS/JSON), snacks.nvim picker. `<leader>gg` opens lazygit in a float (root dir), `<leader>gG` for cwd. AI: Claude Code integrated via the official IDE protocol plugin (claudecode.nvim), CodeCompanion on local Ollama for inline edits and commit messages.
+LazyVim defaults. Custom: `nord` colorscheme (transparent), biome formatter (JS/TS/CSS/JSON), snacks.nvim picker. `<leader>gg` opens lazygit in a float (root dir), `<leader>gG` for cwd. AI: Claude Code integrated via the official IDE protocol plugin (claudecode.nvim), CodeCompanion on local Ollama for inline edits and commit messages.
 
 ## Highlights
 
-- **Unified theme** — Kanagawa Dragon across nvim, Ghostty, btop, and lazygit for a consistent look everywhere
+- **Unified theme** — Nord across nvim, Ghostty, btop, and lazygit for a consistent look everywhere
 - **AI-native editing** — Claude Code runs inside nvim (send context, native diff review); Ollama handles quick local tasks (inline edits, commit messages) offline and quota-free
 - **Keyboard-driven window management** — Tili tiling window manager with built-in floating-window centering
 - **Terminal stack** — Ghostty (GPU-accelerated) as the default terminal, herdr as the multiplexer, with Claude session state shown on agent pane borders
