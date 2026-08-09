@@ -20,7 +20,7 @@ workspaces {
 gaps {
     // All values below are in points. `inner` is the spacing between
     // sibling tiled windows.
-    inner 4
+    inner 8
 
     // `outer` is the padding around the whole tiled area. Either one number
     // (same on all 4 sides) or four numbers in CSS order: top, right,
