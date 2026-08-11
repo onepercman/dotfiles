@@ -73,6 +73,20 @@ cask "codex"
 # OpenCode - SST's terminal-based AI coding agent
 brew "opencode"
 
+# ── CLI Utilities ─────────────────────────────────────────────────────────────
+
+# jq - Command-line JSON processor
+brew "jq"
+
+# yq - Command-line YAML processor
+brew "yq"
+
+# direnv - Per-project environment variable loader
+brew "direnv"
+
+# shellcheck - Static analysis/linter for shell scripts (sync.sh, etc.)
+brew "shellcheck"
+
 # ── Networking / VPN ──────────────────────────────────────────────────────────
 
 # Cloudflare WARP - VPN client

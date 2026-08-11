@@ -142,6 +142,12 @@ if command -v starship &>/dev/null; then
   eval "$(starship init zsh)"
 fi
 
+# ── direnv ───────────────────────────────────────────────────────────────────
+# Per-project environment variable loader (.envrc)
+if command -v direnv &>/dev/null; then
+  eval "$(direnv hook zsh)"
+fi
+
 # ── Dotfiles auto-update ─────────────────────────────────────────────────────
 # Offers to pull + sync when the dotfiles repo is behind its remote.
 # Fetches at most once per $DOTFILES_UPDATE_INTERVAL (default 24h) so shell
