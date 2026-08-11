@@ -30,7 +30,8 @@ dotfiles/
 ├── btop/         → ~/.config/btop/
 ├── lazygit/      → ~/.config/lazygit/
 ├── claude/       → ~/.claude/settings.json
-└── herdr/        → ~/.config/herdr/config.toml
+├── herdr/        → ~/.config/herdr/config.toml
+└── opencode/     → ~/.config/opencode/opencode.jsonc
 ```
 
 ---
