@@ -56,7 +56,7 @@ cd ~/Developer/dotfiles && ./sync.sh
 | `lazygit` | `~/.config/lazygit/` |
 | `claude` | `~/.claude/settings.json` |
 | `herdr` | `~/.config/herdr/config.toml` |
-| `opencode` | `~/.config/opencode/opencode.jsonc` |
+| `opencode` | `~/.config/opencode/opencode.jsonc`, `~/.config/opencode/tui.json` |
 | `codex` | `~/.codex/config.toml` |
 
 ## Runtimes (mise)
