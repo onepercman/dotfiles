@@ -76,32 +76,6 @@ rust = "latest"
 go = "latest"
 ```
 
-## Key Bindings
-
-### Tili
-
-| Key | Action |
-|-----|--------|
-| `alt-hjkl` | Focus window |
-| `alt-shift-hjkl` | Move window |
-| `alt-shift-g` | Join with left neighbor |
-| `alt-w/e/r` | Switch workspace |
-| `alt-shift-w/e/r` | Move window to workspace |
-| `alt-tab` | Switch to previous workspace |
-| `alt-shift-tab` | Move workspace to next monitor |
-| `alt-slash` | Toggle layout (tiles ↔ accordion) |
-| `alt-shift-slash` | Toggle split orientation |
-| `alt-shift-minus/equal` | Resize focused window |
-| `alt-m` | Cycle monitor focus |
-| `alt-shift-;` | Enter resize mode (`h`/`l` resize, `esc`/`enter` exit) |
-| `alt-shift-s` | Manage mode (one-shot: `esc` reload-config, `r` flatten, `alt-shift-hjkl` join direction) |
-
-Workspaces: **work** (Ghostty, auto-assigned), **entertain** (default, Safari auto-assigned), **random** (catch-all).
-
-### Neovim
-
-LazyVim defaults. Custom: `nord` colorscheme (transparent), biome formatter (JS/TS/CSS/JSON), snacks.nvim picker. `<leader>gg` opens lazygit in a float (root dir), `<leader>gG` for cwd.
-
 ## Highlights
 
 - **Unified theme** — Nord across nvim, Ghostty, btop, lazygit, starship, superfile, herdr, and opencode for a consistent look everywhere
