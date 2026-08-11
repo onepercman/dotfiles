@@ -57,6 +57,7 @@ cd ~/Developer/dotfiles && ./sync.sh
 | `claude` | `~/.claude/settings.json` |
 | `herdr` | `~/.config/herdr/config.toml` |
 | `opencode` | `~/.config/opencode/opencode.jsonc` |
+| `codex` | `~/.codex/config.toml` |
 
 ## Runtimes (mise)
 

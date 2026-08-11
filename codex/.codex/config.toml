@@ -1,0 +1,21 @@
+[projects."/Users/itsdezen"]
+trust_level = "trusted"
+
+[projects."/Users/itsdezen/Developer/dotfiles"]
+trust_level = "trusted"
+
+[projects."/Users/itsdezen/Developer"]
+trust_level = "trusted"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 2
+"gpt-5.6-sol" = 1
+
+[features]
+hooks = true
+
+[hooks.state]
+
+[hooks.state."/Users/itsdezen/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:8996de230c8318e43e3ce8c4851a689557a077f327c81984f847a69163bdb62f"
+enabled = true
