@@ -12,7 +12,6 @@ Personal macOS development environment using **GNU Stow** for dotfiles managemen
 - 👻 **Ghostty** — GPU-accelerated terminal emulator, default terminal
 - 🖥️ **herdr** — the agent multiplexer that lives in your terminal
 - 🪟 **Tili** — i3-like tiling window manager, written in Rust
-- 🤖 **Ollama** — local LLM inference (Qwen3 8B)
 - 🐙 **GitHub CLI** — GitHub workflows from the terminal
 - 🐙 **lazygit** — terminal UI for git, standalone or inside Neovim (`<leader>gg`)
 - 📁 **superfile** — terminal file manager (Nord theme)
@@ -52,7 +51,6 @@ cd ~/Developer/dotfiles && ./sync.sh
 | `ghostty` | `~/.config/ghostty/` |
 | `mise` | `~/.config/mise/config.toml` |
 | `git` | `~/.gitconfig` |
-| `ollama` | `~/.config/ollama/env` |
 | `superfile` | `~/.config/superfile/` |
 | `btop` | `~/.config/btop/` |
 | `lazygit` | `~/.config/lazygit/` |
@@ -100,15 +98,14 @@ Workspaces: **work** (Ghostty, auto-assigned), **entertain** (default, Safari au
 
 ### Neovim
 
-LazyVim defaults. Custom: `nord` colorscheme (transparent), biome formatter (JS/TS/CSS/JSON), snacks.nvim picker. `<leader>gg` opens lazygit in a float (root dir), `<leader>gG` for cwd. AI: Claude Code integrated via the official IDE protocol plugin (claudecode.nvim), CodeCompanion on local Ollama for inline edits and commit messages.
+LazyVim defaults. Custom: `nord` colorscheme (transparent), biome formatter (JS/TS/CSS/JSON), snacks.nvim picker. `<leader>gg` opens lazygit in a float (root dir), `<leader>gG` for cwd.
 
 ## Highlights
 
 - **Unified theme** — Nord across nvim, Ghostty, btop, and lazygit for a consistent look everywhere
-- **AI-native editing** — Claude Code runs inside nvim (send context, native diff review); Ollama handles quick local tasks (inline edits, commit messages) offline and quota-free
 - **Keyboard-driven window management** — Tili tiling window manager with built-in floating-window centering
 - **Terminal stack** — Ghostty (GPU-accelerated) as the default terminal, herdr as the multiplexer, with Claude session state shown on agent pane borders
-- **Idempotent sync** — one script (`sync.sh`) installs Homebrew packages, symlinks every Stow package, provisions mise runtimes, and pulls the default Ollama model — safe to re-run anytime
+- **Idempotent sync** — one script (`sync.sh`) installs Homebrew packages, symlinks every Stow package, and provisions mise runtimes — safe to re-run anytime
 - **Auto-update prompt** — new shells periodically check the repo for remote commits and offer to pull + sync (Enter to accept); `dotfiles-update --force` checks on demand
 - **Polyglot runtimes via mise** — node, bun, pnpm, python, uv, rust, go, pinned centrally instead of per-project
 

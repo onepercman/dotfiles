@@ -62,7 +62,7 @@ spin_skip() {
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTFILES_REPO="https://github.com/itsdezen/dotfiles"
 DOTFILES_DIR="$HOME/Developer/dotfiles"
-PACKAGES=(zsh nvim tili starship ghostty mise git ollama superfile btop lazygit claude herdr)
+PACKAGES=(zsh nvim tili starship ghostty mise git superfile btop lazygit claude herdr)
 
 # packages whose target dir mixes static config with app-generated state
 # (e.g. claude projects/sessions, herdr logs/sockets/session.json)
@@ -309,30 +309,6 @@ cmd_sync() {
     fi
   else
     warn "Neovim not found — skipping"
-  fi
-  section_end
-
-  # ── ai models ─────────────────────────────────────────────────────────────────
-  section "AI Models"
-  if command -v ollama &>/dev/null; then
-    if ! ollama list &>/dev/null 2>&1; then
-      spin "Starting Ollama"
-      brew services start ollama >/dev/null 2>&1 || true
-      local _w=0
-      while ! ollama list &>/dev/null 2>&1 && (( _w < 15 )); do
-        sleep 1; (( _w++ ))
-      done
-      spin_ok "Ollama ready"
-    fi
-    if ollama list 2>/dev/null | grep -q "qwen3:8b"; then
-      skip "qwen3:8b"
-    else
-      spin "Pulling qwen3:8b"
-      ollama pull qwen3:8b >/dev/null 2>&1
-      spin_ok "qwen3:8b ready"
-    fi
-  else
-    warn "Ollama not found — skipping"
   fi
   section_end
 

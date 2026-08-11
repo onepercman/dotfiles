@@ -62,11 +62,6 @@ brew "itsdezen/tap/tili"
 # ── Fonts ─────────────────────────────────────────────────────────────────────
 cask "font-maple-mono-nf"
 
-# ── AI / Local LLMs ───────────────────────────────────────────────────────────
-
-# Ollama - Run local LLMs (models stored at ~/.ollama/models, not in dotfiles)
-brew "ollama"
-
 # ── AI Coding Agents ──────────────────────────────────────────────────────────
 
 # Claude Code - Anthropic's terminal-based AI coding assistant

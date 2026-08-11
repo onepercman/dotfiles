@@ -26,7 +26,6 @@ dotfiles/
 ├── ghostty/      → ~/.config/ghostty/
 ├── mise/         → ~/.config/mise/config.toml
 ├── git/          → ~/.gitconfig
-├── ollama/       → ~/.config/ollama/env
 ├── superfile/    → ~/.config/superfile/
 ├── btop/         → ~/.config/btop/
 ├── lazygit/      → ~/.config/lazygit/

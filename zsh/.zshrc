@@ -121,7 +121,6 @@ alias dots="cd ~/Developer/dotfiles"
 alias dots-sync="(cd ~/Developer/dotfiles && git pull && ./sync.sh)"
 alias v="nvim"
 alias cc="claude"
-alias codex-local="codex --oss --local-provider ollama --model qwen3:8b"
 
 # Misc
 alias zrc="$EDITOR ~/.zshrc"
@@ -142,9 +141,6 @@ export VISUAL="$EDITOR"
 if command -v starship &>/dev/null; then
   eval "$(starship init zsh)"
 fi
-
-# ── Ollama ───────────────────────────────────────────────────────────────────
-[[ -f "$XDG_CONFIG_HOME/ollama/env" ]] && source "$XDG_CONFIG_HOME/ollama/env"
 
 # ── Dotfiles auto-update ─────────────────────────────────────────────────────
 # Offers to pull + sync when the dotfiles repo is behind its remote.
