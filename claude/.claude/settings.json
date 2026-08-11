@@ -1,6 +1,8 @@
 {
   "attribution": {
-    "commit": ""
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
   },
   "hooks": {
     "SessionStart": [
@@ -16,6 +18,5 @@
       }
     ]
   },
-  "tui": "fullscreen",
-  "verbose": true
+  "tui": "fullscreen"
 }
