@@ -70,6 +70,9 @@ cask "claude-code"
 # Codex - OpenAI's terminal-based coding agent
 cask "codex"
 
+# OpenCode - SST's terminal-based AI coding agent
+brew "opencode"
+
 # ── Networking / VPN ──────────────────────────────────────────────────────────
 
 # Cloudflare WARP - VPN client
