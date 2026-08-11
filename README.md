@@ -59,44 +59,16 @@ cd ~/Developer/dotfiles && ./sync.sh
 | `opencode` | `~/.config/opencode/opencode.jsonc`, `~/.config/opencode/tui.json` |
 | `codex` | `~/.codex/config.toml` |
 
-## Runtimes (mise)
-
-```toml
-# JavaScript / Bun
-node = "lts"
-bun = "latest"
-pnpm = "latest"
-
-# Python
-python = "latest"
-uv = "latest"
-
-# Systems
-rust = "latest"
-go = "latest"
-```
-
 ## Highlights
 
 - **Unified theme** — Nord across nvim, Ghostty, btop, lazygit, starship, superfile, herdr, and opencode for a consistent look everywhere
 - **Keyboard-driven window management** — Tili tiling window manager with built-in floating-window centering
-- **Terminal stack** — Ghostty (GPU-accelerated) as the default terminal, herdr as the multiplexer, with Claude session state shown on agent pane borders
-- **Idempotent sync** — one script (`sync.sh`) installs Homebrew packages, symlinks every Stow package, and provisions mise runtimes — safe to re-run anytime
+- **Terminal stack** — herdr shows Claude session state on agent pane borders
+- **Idempotent sync** — one script (`sync.sh`) installs Homebrew packages, symlinks every Stow package, and provisions mise runtimes
 - **Auto-update prompt** — new shells periodically check the repo for remote commits and offer to pull + sync (Enter to accept); `dotfiles-update --force` checks on demand
-- **Polyglot runtimes via mise** — node, bun, pnpm, python, uv, rust, go, pinned centrally instead of per-project
+- **Runtimes pinned centrally** — mise versions live in this repo instead of per-project
 
 For exact settings of any given tool, read its config directly under the matching Stow package (e.g. `nvim/.config/nvim/init.lua`) — that file is always the source of truth.
-
-## Workflow
-
-```bash
-# Edit → commit → push
-nvim zsh/.zshrc
-git add . && git commit -m "🔧 ..." && git push
-
-# Pull and sync on another machine
-git pull && ./sync.sh
-```
 
 ## Troubleshooting
 
