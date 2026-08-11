@@ -104,7 +104,7 @@ LazyVim defaults. Custom: `nord` colorscheme (transparent), biome formatter (JS/
 
 ## Highlights
 
-- **Unified theme** — Nord across nvim, Ghostty, btop, and lazygit for a consistent look everywhere
+- **Unified theme** — Nord across nvim, Ghostty, btop, lazygit, starship, superfile, herdr, and opencode for a consistent look everywhere
 - **Keyboard-driven window management** — Tili tiling window manager with built-in floating-window centering
 - **Terminal stack** — Ghostty (GPU-accelerated) as the default terminal, herdr as the multiplexer, with Claude session state shown on agent pane borders
 - **Idempotent sync** — one script (`sync.sh`) installs Homebrew packages, symlinks every Stow package, and provisions mise runtimes — safe to re-run anytime

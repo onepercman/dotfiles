@@ -85,6 +85,14 @@ Trigger → what to update:
 
 **Do not** document: ephemeral state, current branch, per-package config values (theme names, font sizes, keybinds) — those live in the config file and go stale. `README.md` stays at Stack/Highlights altitude.
 
+### 6. Unified theming
+
+Every themed terminal tool in this repo stays synced to the single unified theme (currently Nord — see README.md "Unified theme" line).
+
+- If the tool has a built-in named preset for the theme (e.g. Ghostty's `theme = Nord`, btop's `nord.theme`), set that preset — never hand-author colors when a preset exists.
+- If the tool has no matching built-in preset, hand-author a custom theme file using the same hex palette already in use by the other hand-authored configs in this repo (lazygit and starship are the existing examples — reuse their exact hex values instead of inventing new ones).
+- If the unified theme ever changes (e.g. Nord → something else), update every themed package in this repo in the same change. Never leave the repo partially migrated between themes.
+
 ---
 
 **Maintained by:** @itsdezen — https://github.com/itsdezen/dotfiles
