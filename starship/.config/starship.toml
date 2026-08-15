@@ -40,12 +40,12 @@ blue = "#7AA2F7"      # ANSI 12 bright blue
 violet = "#BB9AF7"    # ANSI 13 bright magenta
 gold = "#FF9E64"      # tokyonight accent orange (no second yellow, use accent orange)
 pink = "#BB9AF7"      # ANSI 5 magenta
-# official brand colors — runtime pills
-node_green = "#215732"
-bun_black = "#000000"
-python_blue = "#306998"
-rust_orange = "#B7410E"
-go_blue = "#375EAB"
+# official brand colors — brightened for visibility as fg-only text (no bg)
+node_green = "#5FA04E"
+bun_black = "#FBF0DF"
+python_blue = "#4B8BBE"
+rust_orange = "#F74C00"
+go_blue = "#00ADD8"
 
 # -----------------------------
 # OS
