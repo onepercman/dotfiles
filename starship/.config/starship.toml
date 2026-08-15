@@ -137,27 +137,27 @@ format = '[](fg:gray_2)'
 
 # -----------------------------
 # LANGUAGE RUNTIMES (mise-managed)
-# each is its own pill, brand color background + white foreground
+# no pill, icon+text colored with brand color, transparent background
 # -----------------------------
 [nodejs]
-style = "bg:node_green fg:gray_1"
-format = ' [](fg:node_green)[$symbol$version]($style)[](fg:node_green)'
+style = "fg:node_green"
+format = ' [$symbol$version]($style)'
 
 [bun]
-style = "bg:bun_black fg:gray_1"
-format = ' [](fg:bun_black)[$symbol$version]($style)[](fg:bun_black)'
+style = "fg:bun_black"
+format = ' [$symbol$version]($style)'
 
 [python]
-style = "bg:python_blue fg:gray_1"
-format = ' [](fg:python_blue)[$symbol$version]($style)[](fg:python_blue)'
+style = "fg:python_blue"
+format = ' [$symbol$version]($style)'
 
 [rust]
-style = "bg:rust_orange fg:gray_1"
-format = ' [](fg:rust_orange)[$symbol$version]($style)[](fg:rust_orange)'
+style = "fg:rust_orange"
+format = ' [$symbol$version]($style)'
 
 [golang]
-style = "bg:go_blue fg:gray_1"
-format = ' [](fg:go_blue)[$symbol$version]($style)[](fg:go_blue)'
+style = "fg:go_blue"
+format = ' [$symbol$version]($style)'
 
 # -----------------------------
 # DOCKER
