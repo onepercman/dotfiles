@@ -6,6 +6,10 @@ return {
 		opts = {
 			style = "night",
 			transparent = true,
+			styles = {
+				sidebars = "transparent",
+				floats = "transparent",
+			},
 			on_highlights = function(highlights, colors)
 				highlights.NormalFloat = { bg = "none" }
 				highlights.FloatBorder = { bg = "none" }
