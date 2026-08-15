@@ -6,6 +6,7 @@ background-opacity = 0.75
 background-blur = macos-glass-regular
 font-thicken = true
 font-thicken-strength = 50
+adjust-cell-height = 10%
 macos-titlebar-style = hidden
 window-padding-x = 10
 window-padding-y = 10
