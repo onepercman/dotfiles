@@ -60,6 +60,7 @@ brew "herdr"
 brew "itsdezen/tap/tili"
 
 # ── Fonts ─────────────────────────────────────────────────────────────────────
+cask "font-fantasque-sans-mono-nerd-font"
 cask "font-maple-mono-nf"
 
 # ── AI Coding Agents ──────────────────────────────────────────────────────────
