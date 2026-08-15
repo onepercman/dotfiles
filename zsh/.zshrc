@@ -47,38 +47,14 @@ zinit ice wait lucid atinit'zicompinit; zicdreplay'
 zinit light zdharma-continuum/fast-syntax-highlighting
 
 # ── Colors ───────────────────────────────────────────────────────────────────
-# Load zsh colors module
-autoload -U colors && colors
-
-# BSD ls colors (macOS) - Full warm color scheme (no cyan/blue)
-# Format: dir symlink socket pipe exec block char setuid setgid sticky other-writable
-export LSCOLORS="DxFxFxDxCxHxHxCbDdDbDd"
-#                ││││││││││└┴─ other-writable: yellow bg, brown fg
-#                │││││││││└─── sticky: yellow bg, red fg
-#                ││││││││└──── setgid: yellow bg, brown fg
-#                │││││││└───── setuid: red bg, cyan fg
-#                ││││││└────── char device: bold light grey
-#                │││││└─────── block device: bold light grey
-#                ││││└──────── executable: bold red
-#                │││└───────── pipe: bold yellow
-#                ││└────────── socket: bold magenta
-#                │└─────────── symlink: bold magenta
-#                └──────────── directory: bold yellow/amber
-
-# GNU ls colors (if using gls from coreutils) - Full warm theme
-export LS_COLORS="di=1;33:ln=1;35:so=1;35:pi=1;33:ex=1;31:bd=1;37:cd=1;37:su=1;41:sg=1;43:tw=1;43:ow=1;33"
-
 # Auto-alias ls with colors for macOS
 if ls -G /dev/null &>/dev/null; then
   alias ls='ls -G'
 fi
 
 # ── Completion styling ───────────────────────────────────────────────────────
-# Reuses $LS_COLORS above, so completion menu colors match `ls` output —
-# both ride Ghostty's TokyoNight Night ANSI palette, no hardcoded hex needed.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case-insensitive
 zstyle ':completion:*' menu select                          # arrow-key select
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"     # colorize list
 
 # Color for diff command
 if diff --color /dev/null{,} &>/dev/null 2>&1; then
