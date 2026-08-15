@@ -9,8 +9,9 @@ const bool ENABLE_BLAZE = true;
 const bool ENABLE_SMEAR = true;
 
 // ---- shared tokyonight accent palette (used by blaze and smear) ----
-const vec4 ACCENT_COLOR = vec4(0.478, 0.635, 0.969, 1.0); // tokyonight blue #7aa2f7 (inner, darker)
-const vec4 ACCENT_COLOR_BRIGHT = vec4(0.490, 0.812, 1.000, 1.0); // tokyonight cyan #7dcfff (outer, brighter)
+// tokyonight only defines one cyan (#7dcfff, ANSI 6/14) so inner and outer share it.
+const vec4 ACCENT_COLOR = vec4(0.490, 0.812, 1.000, 1.0); // tokyonight cyan #7dcfff (inner)
+const vec4 ACCENT_COLOR_BRIGHT = vec4(0.490, 0.812, 1.000, 1.0); // tokyonight cyan #7dcfff (outer)
 
 float sdRectangle(in vec2 p, in vec2 center, in vec2 halfSize) {
     vec2 d = abs(p - center) - halfSize;
