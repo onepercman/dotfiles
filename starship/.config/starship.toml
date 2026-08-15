@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = false
-palette = "nord"
+palette = "tokyonight"
 
 format = """
 [](gray_1)\
@@ -22,7 +22,7 @@ $cmd_duration\
 $character\
 """
 
-[palettes.nord]
+[palettes.tokyonight]
 # grayscale prompt shell
 gray_1 = "#F0F0F0"
 gray_2 = "#B0B0B0"
@@ -30,16 +30,16 @@ gray_3 = "#707070"
 docker_blue = "#1D63ED"
 ink = "#0A0A0A"
 ink_soft = "#111111"
-# nord ANSI palette, same hex Ghostty renders for this theme
-green = "#A3BE8C"     # ANSI 10 bright green (success)
-yellow = "#EBCB8B"    # ANSI 3 yellow
-aqua = "#88C0D0"      # ANSI 14 bright cyan
-red = "#BF616A"       # ANSI 9 bright red (error)
-red_deep = "#BF616A"  # ANSI 1 red (nord11, same as red — nord has only one aurora red)
-blue = "#81A1C1"      # ANSI 12 bright blue
-violet = "#B48EAD"    # ANSI 13 bright magenta
-gold = "#D08770"      # ANSI 11 bright yellow (nord has no second yellow, use aurora orange)
-pink = "#B48EAD"      # ANSI 5 magenta
+# tokyonight (night) ANSI palette, same hex Ghostty renders for this theme
+green = "#9ECE6A"     # ANSI 10 bright green (success)
+yellow = "#E0AF68"    # ANSI 3 yellow
+aqua = "#7DCFFF"      # ANSI 14 bright cyan
+red = "#F7768E"       # ANSI 9 bright red (error)
+red_deep = "#F7768E"  # ANSI 1 red (same as red — tokyonight has only one aurora red)
+blue = "#7AA2F7"      # ANSI 12 bright blue
+violet = "#BB9AF7"    # ANSI 13 bright magenta
+gold = "#FF9E64"      # tokyonight accent orange (no second yellow, use accent orange)
+pink = "#BB9AF7"      # ANSI 5 magenta
 # official brand colors — runtime pills
 node_green = "#215732"
 bun_black = "#000000"

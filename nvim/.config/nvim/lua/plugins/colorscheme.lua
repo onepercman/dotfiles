@@ -1,9 +1,10 @@
 return {
 	{
-		"gbprod/nord.nvim",
-		name = "nord",
+		"folke/tokyonight.nvim",
+		name = "tokyonight",
 		priority = 1000,
 		opts = {
+			style = "night",
 			transparent = true,
 			on_highlights = function(highlights, colors)
 				highlights.NormalFloat = { bg = "none" }
@@ -15,7 +16,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "nord",
+			colorscheme = "tokyonight",
 		},
 	},
 }

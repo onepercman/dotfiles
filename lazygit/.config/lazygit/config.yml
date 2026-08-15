@@ -1,26 +1,6 @@
-# Nord theme — matches nvim/Ghostty/btop for standalone lazygit.
+# No hand-authored theme here — lazygit falls back to its default ANSI-named
+# colors, which inherit Ghostty's active terminal palette naturally.
 # Inside nvim (<leader>gg), snacks.nvim overrides this with a theme generated
 # from the active colorscheme, so this file only applies to standalone runs.
 gui:
   nerdFontsVersion: "3"
-  theme:
-    activeBorderColor:
-      - '#88c0d0'
-      - bold
-    inactiveBorderColor:
-      - '#4c566a'
-    optionsTextColor:
-      - '#81a1c1'
-    selectedLineBgColor:
-      - '#3b4252'
-    cherryPickedCommitBgColor:
-      - '#b48ead'
-    cherryPickedCommitFgColor:
-      - '#eceff4'
-    unstagedChangesColor:
-      - '#bf616a'
-    defaultFgColor:
-      - '#d8dee9'
-    searchingActiveBorderColor:
-      - '#88c0d0'
-      - bold

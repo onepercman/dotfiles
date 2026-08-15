@@ -14,7 +14,7 @@ Personal macOS development environment using **GNU Stow** for dotfiles managemen
 - 🪟 **Tili** — i3-like tiling window manager, written in Rust
 - 🐙 **GitHub CLI** — GitHub workflows from the terminal
 - 🐙 **lazygit** — terminal UI for git, standalone or inside Neovim (`<leader>gg`)
-- 📁 **superfile** — terminal file manager (Nord theme)
+- 📁 **superfile** — terminal file manager (TokyoNight Night theme)
 - 📊 **btop** — resource monitor (CPU, memory, disks, network, processes)
 
 ## Quick Start
@@ -61,7 +61,7 @@ cd ~/Developer/dotfiles && ./sync.sh
 
 ## Highlights
 
-- **Unified theme** — Nord across nvim, Ghostty, btop, lazygit, starship, superfile, herdr, and opencode for a consistent look everywhere
+- **Unified theme** — TokyoNight Night across nvim, Ghostty, btop, lazygit, starship, superfile, herdr, and opencode for a consistent look everywhere
 - **Keyboard-driven window management** — Tili tiling window manager with built-in floating-window centering
 - **Terminal stack** — herdr shows Claude session state on agent pane borders
 - **Idempotent sync** — one script (`sync.sh`) installs Homebrew packages, symlinks every Stow package, and provisions mise runtimes
