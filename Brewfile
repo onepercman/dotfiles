@@ -44,6 +44,9 @@ cask "ghostty"
 # herdr - The agent multiplexer that lives in your terminal
 brew "herdr"
 
+cask "font-fantasque-sans-mono-nerd-font"
+cask "font-maple-mono-nf"
+
 # ── AI Coding Agents ──────────────────────────────────────────────────────────
 
 # Claude Code - Anthropic's terminal-based AI coding assistant
@@ -100,10 +103,6 @@ brew "btop"
 
 # superfile - Pretty, modern terminal file manager
 brew "superfile"
-
-# ── Fonts ─────────────────────────────────────────────────────────────────────
-cask "font-fantasque-sans-mono-nerd-font"
-cask "font-maple-mono-nf"
 
 # ── Networking / VPN ──────────────────────────────────────────────────────────
 
