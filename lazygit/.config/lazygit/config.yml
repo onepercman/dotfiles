@@ -1,6 +1,0 @@
-# No hand-authored theme here — lazygit falls back to its default ANSI-named
-# colors, which inherit Ghostty's active terminal palette naturally.
-# Inside nvim (<leader>gg), snacks.nvim overrides this with a theme generated
-# from the active colorscheme, so this file only applies to standalone runs.
-gui:
-  nerdFontsVersion: "3"
