@@ -62,7 +62,7 @@ spin_skip() {
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTFILES_REPO="https://github.com/itsdezen/dotfiles"
 DOTFILES_DIR="$HOME/Developer/dotfiles"
-PACKAGES=(zsh mise git starship nvim ghostty claude codex opencode herdr tili)
+PACKAGES=(zsh mise git starship nvim ghostty superfile btop claude codex opencode herdr tili)
 
 # packages whose target dir mixes static config with app-generated state
 # (e.g. claude projects/sessions, herdr logs/sockets/session.json, opencode node_modules/cache)

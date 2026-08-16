@@ -16,8 +16,8 @@ Personal macOS development environment using **GNU Stow** for dotfiles managemen
 - 🐙 **lazygit** — terminal UI for git, standalone or inside Neovim (`<leader>gg`); installed via Brewfile, config/theme not managed by this repo
 - 🐳 **Colima + Docker CLI** — terminal-only container runtime, Colima runs the backend VM for `docker`
 - 🐳 **lazydocker** — terminal UI for docker, same author as lazygit
-- 📁 **superfile** — terminal file manager; installed via Brewfile, config/theme not managed by this repo
-- 📊 **btop** — resource monitor (CPU, memory, disks, network, processes); installed via Brewfile, config/theme not managed by this repo
+- 📁 **superfile** — terminal file manager (TokyoNight Night theme)
+- 📊 **btop** — resource monitor (CPU, memory, disks, network, processes)
 
 ## Quick Start
 
@@ -55,6 +55,8 @@ cd ~/Developer/dotfiles && ./sync.sh
 | `ghostty` | `~/.config/ghostty/` |
 | `mise` | `~/.config/mise/config.toml` |
 | `git` | `~/.gitconfig` |
+| `superfile` | `~/.config/superfile/` |
+| `btop` | `~/.config/btop/` |
 | `claude` | `~/.claude/settings.json` |
 | `herdr` | `~/.config/herdr/config.toml` |
 | `opencode` | `~/.config/opencode/opencode.jsonc`, `~/.config/opencode/tui.json` |
@@ -62,7 +64,7 @@ cd ~/Developer/dotfiles && ./sync.sh
 
 ## Highlights
 
-- **Unified theme** — TokyoNight Night across nvim, Ghostty, starship, herdr, and opencode for a consistent look everywhere
+- **Unified theme** — TokyoNight Night across nvim, Ghostty, starship, superfile, herdr, and opencode for a consistent look everywhere
 - **Keyboard-driven window management** — Tili tiling window manager with built-in floating-window centering
 - **Terminal stack** — herdr shows Claude session state on agent pane borders
 - **Idempotent sync** — one script (`sync.sh`) installs Homebrew packages, symlinks every Stow package, and provisions mise runtimes

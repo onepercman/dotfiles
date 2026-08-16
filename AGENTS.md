@@ -26,6 +26,8 @@ dotfiles/
 ├── ghostty/      → ~/.config/ghostty/
 ├── mise/         → ~/.config/mise/config.toml
 ├── git/          → ~/.gitconfig
+├── superfile/    → ~/.config/superfile/
+├── btop/         → ~/.config/btop/
 ├── claude/       → ~/.claude/settings.json
 ├── herdr/        → ~/.config/herdr/config.toml
 ├── opencode/     → ~/.config/opencode/opencode.jsonc, ~/.config/opencode/tui.json
@@ -89,7 +91,8 @@ Every themed terminal tool in this repo stays synced to the single unified theme
 - If the tool has a built-in named preset for the theme (e.g. Ghostty's `theme = TokyoNight Night`), set that preset — never hand-author colors when a preset exists.
 - If the tool has no matching built-in preset, hand-author a custom theme file using the same hex palette already in use by the other hand-authored configs in this repo (starship is the existing example — reuse its exact hex values instead of inventing new ones).
 - If the unified theme ever changes (e.g. TokyoNight → something else), update every themed package in this repo in the same change. Never leave the repo partially migrated between themes.
-- **lazygit, btop, superfile** are installed via Brewfile but not stowed by this repo — their config/theme is not managed here and is out of scope for this rule.
+- **lazygit** is installed via Brewfile but not stowed by this repo — its config/theme is not managed here and is out of scope for this rule.
+- **btop** is stowed but intentionally uses its terminal-adaptive `TTY` preset instead of the unified hex palette, so it's also out of scope for this rule.
 
 ---
 
