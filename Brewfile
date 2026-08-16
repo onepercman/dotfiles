@@ -41,6 +41,23 @@ brew "gh"
 # lazygit - Terminal UI for git; usable standalone or inside Neovim (<leader>gg)
 brew "lazygit"
 
+# ── Containers ────────────────────────────────────────────────────────────────
+
+# Colima - Container runtime backend VM (terminal-only, no Docker Desktop)
+brew "colima"
+
+# Docker CLI
+brew "docker"
+
+# Docker Compose CLI plugin
+brew "docker-compose"
+
+# Docker Buildx CLI plugin
+brew "docker-buildx"
+
+# lazydocker - Terminal UI for docker; same author as lazygit
+brew "lazydocker"
+
 # ── Dotfiles ──────────────────────────────────────────────────────────────────
 
 # Stow - Symlink manager used by sync.sh to link all packages to $HOME

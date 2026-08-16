@@ -14,6 +14,8 @@ Personal macOS development environment using **GNU Stow** for dotfiles managemen
 - 🪟 **Tili** — i3-like tiling window manager, written in Rust
 - 🐙 **GitHub CLI** — GitHub workflows from the terminal
 - 🐙 **lazygit** — terminal UI for git, standalone or inside Neovim (`<leader>gg`)
+- 🐳 **Colima + Docker CLI** — terminal-only container runtime, Colima runs the backend VM for `docker`
+- 🐳 **lazydocker** — terminal UI for docker, same author as lazygit
 - 📁 **superfile** — terminal file manager (TokyoNight Night theme)
 - 📊 **btop** — resource monitor (CPU, memory, disks, network, processes)
 
@@ -31,6 +33,8 @@ cd ~/Developer/dotfiles && ./sync.sh
 ```
 
 `sync.sh` is idempotent — safe to re-run anytime to sync/update.
+
+**Docker/lazydocker** — run `colima start` once after install to bring up the container runtime VM before using `docker` or `lazydocker`.
 
 ## Scripts
 
