@@ -25,6 +25,7 @@ Rules that apply to every project on this machine.
 - Always confirm before: push, force push, `reset --hard`, branch deletion, or any hard-to-reverse operation.
 - Never skip hooks (`--no-verify`) unless explicitly asked.
 - Commit style: emoji prefix — `🚀 🐞 🔧 ♻️ 📝 🗑️ ⬆️`
+- Commit messages always in English, regardless of the conversation language.
 
 ---
 
