@@ -7,17 +7,18 @@
   "hooks": {
     "SessionStart": [
       {
+        "matcher": "*",
         "hooks": [
           {
+            "type": "command",
             "command": "bash '/Users/itsdezen/.claude/hooks/herdr-agent-state.sh' session",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
-        ],
-        "matcher": "*"
+        ]
       }
     ]
   },
   "tui": "fullscreen",
+  "theme": "dark-ansi",
   "disableDeepLinkRegistration": "disable"
 }

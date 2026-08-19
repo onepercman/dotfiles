@@ -44,7 +44,7 @@ cask "ghostty"
 # herdr - The agent multiplexer that lives in your terminal
 brew "herdr"
 
-cask "font-fantasque-sans-mono-nerd-font"
+cask "itsdezen/tap/fantasque-sans-mono-nerdfont"
 cask "font-maple-mono-nf"
 
 # ── AI Coding Agents ──────────────────────────────────────────────────────────
