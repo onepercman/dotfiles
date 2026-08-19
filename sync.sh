@@ -205,10 +205,18 @@ cmd_sync() {
   brew tap itsdezen/tap &>/dev/null || true
   brew trust itsdezen/tap &>/dev/null || true
   spin "Updating Homebrew"
-  brew update &>/dev/null && spin_ok "Homebrew updated" || spin_warn "Homebrew update failed"
-  spin "Checking packages"
+  local _hb_updated=true
+  brew update &>/dev/null || _hb_updated=false
+  local _hb_repo _hb_tag
+  _hb_repo="$(brew --repository)"
+  _hb_tag="$(git -C "$_hb_repo" tag --list --sort=-version:refname | grep -m1 -E '^[0-9]+\.[0-9]+\.[0-9]+$' || true)"
+  if [[ -n "$_hb_tag" ]]; then
+    git -C "$_hb_repo" checkout --quiet "$_hb_tag" &>/dev/null || true
+  fi
+  $_hb_updated && spin_ok "Homebrew updated" || spin_warn "Homebrew update failed"
+  run "Checking packages"
   local _bout
-  _bout=$(brew bundle --file="$DOTFILES/Brewfile" -v 2>&1) || abort "brew bundle failed: $_bout"
+  _bout=$(SUDO_PROMPT="      Password: " brew bundle --file="$DOTFILES/Brewfile" -v 2>&1) || abort "brew bundle failed: $_bout"
   local _using _inst _upg
   _using=$(grep -cE '^Using ' <<<"$_bout" || true)
   _inst=$(grep -E '^Installing .+\. It is not currently installed\.$' <<<"$_bout" \
