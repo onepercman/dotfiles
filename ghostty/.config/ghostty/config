@@ -17,6 +17,10 @@ window-vsync = true
 # opt+backspace defaults to ESC+DEL, which breaks in terminal vim (ESC exits insert mode)
 keybind = opt+backspace=text:\x17
 
+# cmd+backspace has no default binding; send ctrl+u (delete to start of line),
+# which works in both readline (shell) and vim insert mode.
+keybind = super+backspace=text:\x15
+
 # cmd+k defaults to clear_screen, which only clears Ghostty's own buffer and
 # does nothing inside herdr (herdr owns its own pane scrollback). Send ctrl+l
 # instead so the focused shell clears itself, working both inside and outside
