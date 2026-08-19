@@ -24,7 +24,9 @@ Rules that apply to every project on this machine.
 
 - Always confirm before: push, force push, `reset --hard`, branch deletion, or any hard-to-reverse operation.
 - Never skip hooks (`--no-verify`) unless explicitly asked.
-- Commit style: emoji prefix — `🚀 🐞 🔧 ♻️ 📝 🗑️ ⬆️`
+- Commit style: Conventional Commits — `type(scope): summary`. Valid types: `feat`, `fix`, `docs`, `chore`, `refactor`, `test`. Scope is optional; use the affected package/module/area when it helps.
+- PR titles use the same `type(scope): summary` format as commits.
+- Branch names: at most three words, hyphen-separated, no slashes or type prefixes (e.g. `session-recovery`, not `feat/session-recovery`).
 - Commit messages always in English, regardless of the conversation language.
 
 ---
