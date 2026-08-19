@@ -35,6 +35,9 @@ return {
         backend = "kitty",
         force = false,
       },
+      terminal = {
+        win = { position = "float", border = "rounded" },
+      },
       picker = {
         icons = {
           tree = {
