@@ -308,11 +308,20 @@ cmd_sync() {
       spin_skip "Plugins up to date"
     fi
     if ! $lock_dirty_before && ! git -C "$DOTFILES" diff --quiet -- nvim/.config/nvim/lazy-lock.json 2>/dev/null; then
-      if git -C "$DOTFILES" add nvim/.config/nvim/lazy-lock.json 2>/dev/null \
-        && git -C "$DOTFILES" commit -m "⬆️ nvim: update plugin lockfile" >/dev/null 2>&1; then
-        item_new "committed lockfile update"
+      local _commit_resp="y"
+      if $_TTY; then
+        printf "  ${Y}?${NC} commit lockfile update? [Y/n] "
+        read -r _commit_resp
+      fi
+      if [[ -z "$_commit_resp" || "$_commit_resp" =~ ^[Yy]$ ]]; then
+        if git -C "$DOTFILES" add nvim/.config/nvim/lazy-lock.json 2>/dev/null \
+          && git -C "$DOTFILES" commit -m "⬆️ nvim: update plugin lockfile" >/dev/null 2>&1; then
+          item_new "committed lockfile update"
+        else
+          warn "lockfile changed but auto-commit failed"
+        fi
       else
-        warn "lockfile changed but auto-commit failed"
+        skip "lockfile commit skipped"
       fi
     fi
   else
