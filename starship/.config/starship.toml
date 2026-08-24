@@ -4,14 +4,11 @@ add_newline = false
 palette = "tokyonight"
 
 format = """
-[](gray_1)\
 $os\
 $username\
-[](fg:gray_1 bg:gray_2)\
 $directory\
 $git_branch\
 $git_status\
-${custom.gray2_close}\
 $nodejs\
 $bun\
 $python\
@@ -23,37 +20,18 @@ $character\
 """
 
 [palettes.tokyonight]
-# grayscale prompt shell
-gray_1 = "#F0F0F0"
-gray_2 = "#B0B0B0"
-gray_3 = "#707070"
-docker_blue = "#1D63ED"
-ink = "#0A0A0A"
-ink_soft = "#111111"
-# tokyonight (night) ANSI palette, same hex Ghostty renders for this theme
-green = "#9ECE6A"     # ANSI 10 bright green (success)
-yellow = "#E0AF68"    # ANSI 3 yellow
-aqua = "#7DCFFF"      # ANSI 14 bright cyan
-red = "#F7768E"       # ANSI 9 bright red (error)
-red_deep = "#F7768E"  # ANSI 1 red (same as red — tokyonight has only one aurora red)
-blue = "#7AA2F7"      # ANSI 12 bright blue
-violet = "#BB9AF7"    # ANSI 13 bright magenta
-gold = "#FF9E64"      # tokyonight accent orange (no second yellow, use accent orange)
-pink = "#BB9AF7"      # ANSI 5 magenta
-# official brand colors — brightened for visibility as fg-only text (no bg)
-node_green = "#5FA04E"
-bun_black = "#FBF0DF"
-python_blue = "#4B8BBE"
-rust_orange = "#F74C00"
-go_blue = "#00ADD8"
+# every segment inherits the terminal's own ANSI color scheme —
+# only the OS icon is pinned to a fixed hex (always white), named
+# os_white so it doesn't shadow the native ANSI "white" keyword
+os_white = "#FFFFFF"
 
 # -----------------------------
 # OS
 # -----------------------------
 [os]
 disabled = false
-style = "bg:gray_1 fg:ink"
-format = '[$symbol]($style)'
+style = "bold os_white"
+format = '[ $symbol]($style)'
 
 [os.symbols]
 Macos = ""
@@ -68,26 +46,26 @@ Debian = ""
 # -----------------------------
 [username]
 show_always = false
-style_user = "bg:gray_1 fg:ink"
-style_root = "bg:gray_1 fg:ink"
-format = '[$user ]($style)'
+style_user = "white"
+style_root = "white"
+format = '[ $user]($style)'
 disabled = false
 
 # -----------------------------
 # DIRECTORY
 # -----------------------------
 [directory]
-style = "bg:gray_2 fg:ink_soft"
-format = '[ $path ]($style)'
+style = "cyan"
+format = '[ $path]($style)'
 truncation_length = 3
 truncate_to_repo = true
 fish_style_pwd_dir_length = 0
 use_os_path_sep = true
-home_symbol = "󰋜 ~"
+home_symbol = " ~"
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"Developer" = "󰲋 Developer"
+"Developer" = " Developer"
 "Projects" = "󱌣 Projects"
 "Workspace" = "󱂬 Workspace"
 "Code" = "󰨞 Code"
@@ -97,7 +75,7 @@ truncation_symbol = "…/"
 "Music" = "󱍙 Music"
 "Pictures" = "󰉏 Pictures"
 "Desktop" = "󰟀 Desktop"
-"dotfiles" = "󰒓 dotfiles"
+"dotfiles" = " dotfiles"
 ".config" = "󱁿 .config"
 ".git" = "󰊢 .git"
 
@@ -106,57 +84,46 @@ truncation_symbol = "…/"
 # -----------------------------
 [git_branch]
 symbol = ""
-style = "bg:gray_3 fg:gray_1"
-format = '[](fg:gray_2 bg:gray_3)[ $symbol $branch ]($style)'
+style = "purple"
+format = '[ $symbol $branch]($style)'
 
 [git_status]
-style = "bg:gray_3"
-format = '([$staged$modified$untracked$renamed$deleted$conflicted$stashed$ahead_behind]($style))[](fg:gray_3)'
+format = '([$staged$modified$untracked$renamed$deleted$conflicted$stashed$ahead_behind]($style))'
 
-staged = '[+${count} ](bold green bg:gray_3)'
-modified = '[!${count} ](bold yellow bg:gray_3)'
-untracked = '[?${count} ](bold aqua bg:gray_3)'
-deleted = '[✘${count} ](bold red bg:gray_3)'
-renamed = '[→ ](bold blue bg:gray_3)'
-conflicted = '[⚑ ](bold violet bg:gray_3)'
-stashed = '[≡${count} ](bold pink bg:gray_3)'
+staged = '[ +${count}](bold green)'
+modified = '[ !${count}](bold yellow)'
+untracked = '[ ?${count}](bold cyan)'
+deleted = '[ ✘${count}](bold red)'
+renamed = '[ →](bold blue)'
+conflicted = '[ ⚑](bold purple)'
+stashed = '[ ≡${count}](bold bright-purple)'
 
-ahead = '[⇡${count} ](bold green bg:gray_3)'
-behind = '[⇣${count} ](bold red_deep bg:gray_3)'
-diverged = '[⇕⇡${ahead_count}⇣${behind_count} ](bold gold bg:gray_3)'
-
-# -----------------------------
-# GRAY_2 CLOSE
-# rounds off the gray_2 pill when NOT in a git repo
-# (in a repo, git_branch/git_status own the gray_3 caps instead)
-# -----------------------------
-[custom.gray2_close]
-when = "! git rev-parse --is-inside-work-tree 2>/dev/null"
-ignore_timeout = true
-format = '[](fg:gray_2)'
+ahead = '[ ⇡${count}](bold green)'
+behind = '[ ⇣${count}](bold red)'
+diverged = '[ ⇕⇡${ahead_count}⇣${behind_count}](bold bright-yellow)'
 
 # -----------------------------
 # LANGUAGE RUNTIMES (mise-managed)
-# no pill, icon+text colored with brand color, transparent background
+# no pill, plain ANSI-colored text, transparent background
 # -----------------------------
 [nodejs]
-style = "fg:node_green"
+style = "green"
 format = ' [$symbol$version]($style)'
 
 [bun]
-style = "fg:bun_black"
+style = "bright-yellow"
 format = ' [$symbol$version]($style)'
 
 [python]
-style = "fg:python_blue"
+style = "blue"
 format = ' [$symbol$version]($style)'
 
 [rust]
-style = "fg:rust_orange"
+style = "bright-red"
 format = ' [$symbol$version]($style)'
 
 [golang]
-style = "fg:go_blue"
+style = "bright-cyan"
 format = ' [$symbol$version]($style)'
 
 # -----------------------------
@@ -164,8 +131,8 @@ format = ' [$symbol$version]($style)'
 # -----------------------------
 [docker_context]
 symbol = ""
-style = "bg:docker_blue fg:gray_1"
-format = ' [](fg:docker_blue)[$symbol $context]($style)[](fg:docker_blue)'
+style = "blue"
+format = ' [$symbol $context]($style)'
 
 # -----------------------------
 # COMMAND DURATION
@@ -173,12 +140,13 @@ format = ' [](fg:docker_blue)[$symbol $context]($style)[](fg:docker_blue)'
 [cmd_duration]
 min_time = 2_000
 format = ' [$duration]($style)'
-style = "bold gold"
+style = "bright-blue"
 
 # -----------------------------
 # CHARACTER (prompt symbol)
 # -----------------------------
 [character]
-success_symbol = ' [•](bold green)'
-error_symbol = ' [•](bold red)'
-vimcmd_symbol = ' [•](bold green)'
+format = "$symbol "
+success_symbol = ' [](bold green)'
+error_symbol = ' [](bold red)'
+vimcmd_symbol = ' [](bold green)'

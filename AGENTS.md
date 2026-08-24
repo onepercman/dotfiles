@@ -89,10 +89,11 @@ Trigger → what to update:
 Every themed terminal tool in this repo stays synced to the single unified theme (currently TokyoNight Night — see README.md "Unified theme" line).
 
 - If the tool has a built-in named preset for the theme (e.g. Ghostty's `theme = TokyoNight Night`), set that preset — never hand-author colors when a preset exists.
-- If the tool has no matching built-in preset, hand-author a custom theme file using the same hex palette already in use by the other hand-authored configs in this repo (starship is the existing example — reuse its exact hex values instead of inventing new ones).
+- If the tool has no matching built-in preset, hand-author a custom theme file using the same hex palette already in use by the other hand-authored configs in this repo (superfile's `theme/tokyonight.toml` is the existing example — reuse its exact hex values instead of inventing new ones).
 - If the unified theme ever changes (e.g. TokyoNight → something else), update every themed package in this repo in the same change. Never leave the repo partially migrated between themes.
 - **lazygit** is installed via Brewfile but not stowed by this repo — its config/theme is not managed here and is out of scope for this rule.
 - **btop** is stowed but intentionally uses its terminal-adaptive `TTY` preset instead of the unified hex palette, so it's also out of scope for this rule.
+- **starship** is stowed but intentionally uses the terminal's native ANSI color scheme (not fixed hex) for every segment except the OS icon, so it's also out of scope for this rule.
 
 ---
 

@@ -64,7 +64,7 @@ cd ~/Developer/dotfiles && ./sync.sh
 
 ## Highlights
 
-- **Unified theme** — TokyoNight Night across nvim, Ghostty, starship, superfile, herdr, and opencode for a consistent look everywhere
+- **Unified theme** — TokyoNight Night across nvim, Ghostty, superfile, herdr, and opencode for a consistent look everywhere (starship and btop are terminal-adaptive instead)
 - **Keyboard-driven window management** — Tili tiling window manager with built-in floating-window centering
 - **Terminal stack** — herdr shows Claude session state on agent pane borders
 - **Idempotent sync** — one script (`sync.sh`) installs Homebrew packages, symlinks every Stow package, and provisions mise runtimes
