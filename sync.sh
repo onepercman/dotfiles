@@ -320,7 +320,7 @@ cmd_sync() {
     if ! $lock_dirty_before && ! git -C "$DOTFILES" diff --quiet -- nvim/.config/nvim/lazy-lock.json 2>/dev/null; then
       local _commit_resp="y"
       if $_TTY; then
-        printf "  ${Y}?${NC} commit lockfile update? [Y/n] "
+        printf "      ${Y}?${NC} commit lockfile update? [Y/n] "
         read -r _commit_resp
       fi
       if [[ -z "$_commit_resp" || "$_commit_resp" =~ ^[Yy]$ ]]; then
