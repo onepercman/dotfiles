@@ -267,8 +267,18 @@ cmd_sync() {
   if echo "$_mout" | grep -q "all tools are installed"; then
     spin_skip "Runtimes up to date"
   else
-    spin_ok "Runtimes updated"
+    spin_ok "Runtimes installed"
   fi
+
+  spin "Upgrading runtimes"
+  local _uout
+  _uout=$(mise upgrade --yes 2>&1) || abort "mise upgrade failed: $_uout"
+  if echo "$_uout" | grep -qi "up to date"; then
+    spin_skip "Runtimes up to date"
+  else
+    spin_ok "Runtimes upgraded"
+  fi
+
   eval "$(mise env)"
   mise ls --current 2>/dev/null | while read -r name version _; do
     [[ -n "$name" ]] && skip "$name $version"
