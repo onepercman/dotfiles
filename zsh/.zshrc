@@ -98,6 +98,7 @@ alias dots-sync="(cd ~/Developer/dotfiles && git pull && ./sync.sh)"
 alias v="nvim"
 alias cc="claude"
 alias oc="opencode"
+alias cx="codex"
 alias h="herdr"
 
 # Misc
