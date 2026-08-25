@@ -35,10 +35,7 @@ return {
       { "<leader>dPc", function() require("dap-python").test_class() end, desc = "Debug Class", ft = "python" },
     },
     config = function()
-      require("mason-nvim-dap").setup({
-        automatic_installation = true,
-        ensure_installed = { "delve", "debugpy" },
-      })
+      require("mason-nvim-dap").setup({ automatic_installation = true })
 
       vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
 
@@ -63,7 +60,7 @@ return {
       dap.listeners.before.event_exited["dapui_config"] = function() dapui.close({}) end
 
       require("dap-go").setup()
-      require("dap-python").setup("debugpy-adapter")
+      require("dap-python").setup("uv")
     end,
   },
   { "leoluz/nvim-dap-go", lazy = true },

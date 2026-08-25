@@ -17,10 +17,7 @@ return {
       -- single source of truth; disable mason-lspconfig's own auto-enable to
       -- avoid it silently attaching unrelated mason packages as LSP clients
       automatic_enable = false,
-      ensure_installed = {
-        "lua_ls", "vtsls", "tailwindcss", "vue_ls", "svelte",
-        "pyright", "ruff", "rust_analyzer", "gopls",
-      },
+      ensure_installed = { "lua_ls", "vtsls", "tailwindcss", "vue_ls", "svelte" },
     },
   },
   {
@@ -98,9 +95,9 @@ return {
       vim.lsp.config("vue_ls", {})
       vim.lsp.config("svelte", {})
 
-      -- pyright + ruff run together: pyright for hover/completion/types,
+      -- basedpyright + ruff run together: basedpyright for hover/completion/types,
       -- ruff for diagnostics/actions (its own hover disabled below)
-      vim.lsp.config("pyright", {
+      vim.lsp.config("basedpyright", {
         settings = { python = { analysis = { typeCheckingMode = "basic" } } },
       })
       vim.lsp.config("ruff", {
@@ -146,10 +143,10 @@ return {
 
       vim.lsp.enable({
         "lua_ls", "vtsls", "tailwindcss", "vue_ls", "svelte",
-        "pyright", "ruff", "rust_analyzer", "gopls",
+        "basedpyright", "ruff", "rust_analyzer", "gopls",
       })
 
-      -- disable ruff's hover in favor of pyright's
+      -- disable ruff's hover in favor of basedpyright's
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
           local client = vim.lsp.get_client_by_id(args.data.client_id)
