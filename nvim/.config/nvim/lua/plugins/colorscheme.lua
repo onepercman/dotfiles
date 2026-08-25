@@ -2,6 +2,7 @@ return {
 	{
 		"folke/tokyonight.nvim",
 		name = "tokyonight",
+		lazy = false,
 		priority = 1000,
 		opts = {
 			style = "night",
@@ -16,11 +17,9 @@ return {
 				highlights.FloatTitle = { bg = "none" }
 			end,
 		},
-	},
-	{
-		"LazyVim/LazyVim",
-		opts = {
-			colorscheme = "tokyonight",
-		},
+		config = function(_, opts)
+			require("tokyonight").setup(opts)
+			vim.cmd.colorscheme("tokyonight")
+		end,
 	},
 }

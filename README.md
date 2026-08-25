@@ -8,7 +8,7 @@ Personal macOS development environment using **GNU Stow** for dotfiles managemen
 - 🐚 **zsh + zinit + Starship** — shell, plugins, prompt
 - 🔧 **mise** — polyglot runtime manager (node, bun, pnpm, python, uv, rust, go)
 - 📦 **pnpm + bun** — JS package managers
-- ✏️ **Neovim (LazyVim)** — primary code editor
+- ✏️ **Neovim** — primary code editor
 - 👻 **Ghostty** — GPU-accelerated terminal emulator, default terminal
 - 🖥️ **herdr** — the agent multiplexer that lives in your terminal
 - 🪟 **Tili** — i3-like tiling window manager, written in Rust
