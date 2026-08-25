@@ -16,7 +16,6 @@ return {
       return {
         options = {
           -- personal customization: powerline-style separators
-          theme                = "auto",
           section_separators   = { left = "", right = "" },
           component_separators = { left = "", right = "" },
           globalstatus         = vim.o.laststatus == 3,

@@ -8,10 +8,8 @@ return {
       {
         "jay-babu/mason-nvim-dap.nvim",
         dependencies = "mason-org/mason.nvim",
-        opts = {
-          automatic_installation = true,
-          ensure_installed = { "delve", "debugpy" },
-        },
+        -- setup() is called manually below, after DAP adapters are configured
+        config = function() end,
       },
     },
     keys = {

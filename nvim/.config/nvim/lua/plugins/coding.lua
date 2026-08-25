@@ -5,26 +5,20 @@ return {
     version = "1.*",
     dependencies = { "rafamadriz/friendly-snippets", "folke/lazydev.nvim" },
     opts = {
-      snippets = { preset = "default" },
-      appearance = { nerd_font_variant = "mono" },
       completion = {
-        accept = { auto_brackets = { enabled = true } },
         documentation = { auto_show = true, auto_show_delay_ms = 200 },
       },
       sources = {
-        default = { "lsp", "path", "snippets", "buffer" },
         per_filetype = { lua = { inherit_defaults = true, "lazydev" } },
         providers = {
           lazydev = { name = "LazyDev", module = "lazydev.integrations.blink", score_offset = 100 },
         },
       },
       cmdline = {
-        enabled = true,
-        keymap = { preset = "cmdline", ["<Right>"] = false, ["<Left>"] = false },
+        keymap = { ["<Right>"] = false, ["<Left>"] = false },
         completion = {
           list = { selection = { preselect = false } },
           menu = { auto_show = function(ctx) return vim.fn.getcmdtype() == ":" end },
-          ghost_text = { enabled = true },
         },
       },
       keymap = { preset = "enter", ["<C-y>"] = { "select_and_accept" } },
@@ -35,10 +29,6 @@ return {
     event = "VeryLazy",
     opts = {
       modes = { insert = true, command = true, terminal = false },
-      skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
-      skip_ts = { "string" },
-      skip_unbalanced = true,
-      markdown = true,
     },
   },
   {

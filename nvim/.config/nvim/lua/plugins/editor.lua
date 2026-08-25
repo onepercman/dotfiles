@@ -1,7 +1,7 @@
 return {
   {
     "MagicDuck/grug-far.nvim",
-    opts = { headerMaxWidth = 80 },
+    opts = {},
     cmd = { "GrugFar", "GrugFarWithin" },
     keys = {
       {
@@ -43,9 +43,7 @@ return {
   {
     "folke/trouble.nvim",
     cmd = { "Trouble" },
-    opts = {
-      modes = { lsp = { win = { position = "right" } } },
-    },
+    opts = {},
     keys = {
       { "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", desc = "Diagnostics (Trouble)" },
       { "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", desc = "Buffer Diagnostics (Trouble)" },

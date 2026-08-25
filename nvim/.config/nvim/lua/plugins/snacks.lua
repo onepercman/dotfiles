@@ -4,9 +4,10 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
-      bigfile = { enabled = true },
+      -- listing a module key here (even empty) is enough to enable it —
+      -- snacks.nvim defaults every mentioned module's `enabled` to true
+      bigfile = {},
       dashboard = {
-        enabled = true,
         preset = {
           header = [[
 ██████╗ ███████╗███████╗███████╗███╗   ██╗
@@ -27,29 +28,24 @@ return {
           },
         },
       },
-      explorer = { enabled = true, replace_netrw = true },
+      explorer = { replace_netrw = true },
       indent = {
-        enabled = true,
         -- personal customization: rounded-corner indent chunk glyphs
         chunk = {
           enabled = true,
           char = {
             corner_top    = "╭",
             corner_bottom = "╰",
-            horizontal    = "─",
-            vertical      = "│",
             arrow         = "›",
           },
         },
         animate = {
-          enabled = true,
-          duration = { step = 20, total = 300 },
+          duration = { total = 300 },
         },
       },
-      input = { enabled = true },
-      notifier = { enabled = true },
+      input = {},
+      notifier = {},
       picker = {
-        enabled = true,
         -- personal customization: tree glyphs + explorer/files picker sources
         icons = {
           tree = {
@@ -62,7 +58,7 @@ return {
           explorer = {
             hidden = true,
             ignored = true,
-            layout = { preview = "main", layout = { preset = "ivy_split" } },
+            layout = { preview = "main", layout = { preset = "sidebar" } },
           },
           files = {
             hidden = true,
@@ -70,20 +66,18 @@ return {
           },
         },
       },
-      quickfile = { enabled = true },
-      scope = { enabled = true },
-      scroll = { enabled = true },
+      quickfile = {},
+      scope = {},
+      scroll = {},
       -- statuscolumn handled by native opt.statuscolumn in options.lua-equivalent; keep snacks' off
       statuscolumn = { enabled = false },
-      words = { enabled = true },
+      words = {},
       -- personal customization: floating terminal + kitty image backend
       terminal = {
         win = { position = "float", border = "rounded" },
       },
       image = {
-        enabled = true,
         backend = "kitty",
-        force = false,
       },
       styles = {
         notification = { border = "rounded" },

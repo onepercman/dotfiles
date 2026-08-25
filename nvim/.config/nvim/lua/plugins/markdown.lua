@@ -6,16 +6,11 @@ return {
     opts = {
       heading = {
         sign = false,
-        icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
       },
       code = {
         sign = false,
         width = "block",
         right_pad = 1,
-      },
-      checkbox = {
-        unchecked = { icon = "󰄱 " },
-        checked   = { icon = "󰱒 " },
       },
     },
     config = function(_, opts)

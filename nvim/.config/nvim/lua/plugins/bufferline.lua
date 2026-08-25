@@ -17,8 +17,6 @@ return {
     },
     opts = {
       options = {
-        -- personal customization: thin separator between buffer tabs
-        separator_style = "thin",
         close_command = function(n) Snacks.bufdelete(n) end,
         right_mouse_command = function(n) Snacks.bufdelete(n) end,
         diagnostics = "nvim_lsp",
