@@ -29,6 +29,8 @@ return {
     opts = {
       library = {
         { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+        { path = "snacks.nvim", words = { "Snacks" } },
+        { path = "bufferline.nvim", words = { "nvim_bufferline" } },
       },
     },
   },
@@ -203,7 +205,7 @@ return {
           end
           if has("textDocument/codeLens") then
             map({ "n", "x" }, "<leader>cc", vim.lsp.codelens.run, "Run Codelens")
-            map("n", "<leader>cC", vim.lsp.codelens.refresh, "Refresh & Display Codelens")
+            map("n", "<leader>cC", function() vim.lsp.codelens.enable(true, { bufnr = buf }) end, "Refresh & Display Codelens")
           end
           if has("workspace/willRenameFiles") or has("workspace/didRenameFiles") then
             map("n", "<leader>cR", function() Snacks.rename.rename_file() end, "Rename File")
