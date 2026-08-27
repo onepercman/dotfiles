@@ -19,18 +19,12 @@ $cmd_duration\
 $character\
 """
 
-[palettes.tokyonight]
-# every segment inherits the terminal's own ANSI color scheme —
-# only the OS icon is pinned to a fixed hex (always white), named
-# os_white so it doesn't shadow the native ANSI "white" keyword
-os_white = "#FFFFFF"
-
 # -----------------------------
 # OS
 # -----------------------------
 [os]
 disabled = false
-style = "bold os_white"
+style = "bold white"
 format = '[ $symbol]($style)'
 
 [os.symbols]

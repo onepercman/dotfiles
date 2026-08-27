@@ -93,7 +93,7 @@ Every themed terminal tool in this repo stays synced to the single unified theme
 - If the unified theme ever changes (e.g. TokyoNight → something else), update every themed package in this repo in the same change. Never leave the repo partially migrated between themes.
 - **lazygit** is installed via Brewfile but not stowed by this repo — its config/theme is not managed here and is out of scope for this rule.
 - **btop** is stowed but intentionally uses its terminal-adaptive `TTY` preset instead of the unified hex palette, so it's also out of scope for this rule.
-- **starship** is stowed but intentionally uses the terminal's native ANSI color scheme (not fixed hex) for every segment except the OS icon, so it's also out of scope for this rule.
+- **starship** is stowed but intentionally uses the terminal's native ANSI color scheme (not fixed hex) for every segment, including the OS icon, so it's also out of scope for this rule.
 
 ---
 
