@@ -17,7 +17,7 @@ Personal macOS development environment using **GNU Stow** for dotfiles managemen
 - 🐳 **Colima + Docker CLI** — terminal-only container runtime, Colima runs the backend VM for `docker`
 - 🐳 **lazydocker** — terminal UI for docker, same author as lazygit
 - 📁 **superfile** — terminal file manager (TokyoNight Night theme)
-- 📊 **btop** — resource monitor (CPU, memory, disks, network, processes)
+- 📊 **btop** — resource monitor (CPU, memory, disks, network, processes; TokyoNight theme)
 
 ## Quick Start
 
@@ -64,7 +64,7 @@ cd ~/Developer/dotfiles && ./sync.sh
 
 ## Highlights
 
-- **Unified theme** — TokyoNight Night across nvim, Ghostty, superfile, herdr, and opencode for a consistent look everywhere (starship and btop are terminal-adaptive instead)
+- **Unified theme** — TokyoNight Night across nvim, Ghostty, superfile, btop, herdr, and opencode for a consistent look everywhere (starship is terminal-adaptive instead)
 - **Keyboard-driven window management** — Tili tiling window manager with built-in floating-window centering
 - **Terminal stack** — herdr shows Claude session state on agent pane borders
 - **Idempotent sync** — one script (`sync.sh`) installs Homebrew packages, symlinks every Stow package, and provisions mise runtimes
