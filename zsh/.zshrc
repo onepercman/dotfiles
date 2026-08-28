@@ -100,6 +100,10 @@ alias cc="claude"
 alias oc="opencode"
 alias cx="codex"
 alias h="herdr"
+alias t="tmux"
+alias ta="tmux attach"
+alias tl="tmux ls"
+alias tn="tmux new -s"
 
 # Misc
 alias zrc="$EDITOR ~/.zshrc"

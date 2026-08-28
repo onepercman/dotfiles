@@ -44,6 +44,9 @@ cask "ghostty"
 # herdr - The agent multiplexer that lives in your terminal
 brew "herdr"
 
+# tmux - Terminal multiplexer
+brew "tmux"
+
 cask "itsdezen/tap/fantasque-sans-mono-nerdfont"
 cask "font-maple-mono-nf"
 

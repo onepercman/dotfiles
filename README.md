@@ -11,6 +11,7 @@ Personal macOS development environment using **GNU Stow** for dotfiles managemen
 - ✏️ **Neovim** — primary code editor
 - 👻 **Ghostty** — GPU-accelerated terminal emulator, default terminal
 - 🖥️ **herdr** — the agent multiplexer that lives in your terminal
+- 🔀 **tmux** — terminal multiplexer
 - 🪟 **Tili** — i3-like tiling window manager, written in Rust
 - 🐙 **GitHub CLI** — GitHub workflows from the terminal
 - 🐙 **lazygit** — terminal UI for git, standalone or inside Neovim (`<leader>gg`); installed via Brewfile, config/theme not managed by this repo
@@ -57,6 +58,7 @@ cd ~/Developer/dotfiles && ./sync.sh
 | `git` | `~/.gitconfig` |
 | `superfile` | `~/.config/superfile/` |
 | `btop` | `~/.config/btop/` |
+| `tmux` | `~/.tmux.conf` |
 | `claude` | `~/.claude/settings.json` |
 | `herdr` | `~/.config/herdr/config.toml` |
 | `opencode` | `~/.config/opencode/opencode.jsonc`, `~/.config/opencode/tui.json` |
@@ -64,7 +66,7 @@ cd ~/Developer/dotfiles && ./sync.sh
 
 ## Highlights
 
-- **Unified theme** — TokyoNight Night across nvim, Ghostty, superfile, btop, herdr, and opencode for a consistent look everywhere (starship is terminal-adaptive instead)
+- **Unified theme** — TokyoNight Night across nvim, Ghostty, superfile, btop, herdr, and opencode for a consistent look everywhere (starship and tmux are terminal-adaptive instead)
 - **Keyboard-driven window management** — Tili tiling window manager with built-in floating-window centering
 - **Terminal stack** — herdr shows Claude session state on agent pane borders
 - **Idempotent sync** — one script (`sync.sh`) installs Homebrew packages, symlinks every Stow package, and provisions mise runtimes
