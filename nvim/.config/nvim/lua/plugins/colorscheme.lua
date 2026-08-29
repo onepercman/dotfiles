@@ -15,6 +15,10 @@ return {
 				highlights.NormalFloat = { bg = "none" }
 				highlights.FloatBorder = { bg = "none" }
 				highlights.FloatTitle = { bg = "none" }
+				highlights.WinSeparator = { fg = colors.fg_gutter, bold = true }
+				highlights.LineNr = { fg = colors.dark5 }
+				highlights.LineNrAbove = { fg = colors.dark5 }
+				highlights.LineNrBelow = { fg = colors.dark5 }
 			end,
 		},
 		config = function(_, opts)
