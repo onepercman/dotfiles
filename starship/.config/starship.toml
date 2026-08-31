@@ -54,8 +54,8 @@ truncation_length = 3
 truncate_to_repo = true
 fish_style_pwd_dir_length = 0
 use_os_path_sep = true
-home_symbol = " ~"
-truncation_symbol = "…/"
+home_symbol = "~"
+truncation_symbol = ""
 
 [directory.substitutions]
 "Developer" = " Developer"
