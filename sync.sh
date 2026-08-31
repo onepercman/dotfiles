@@ -265,7 +265,7 @@ cmd_sync() {
   local _mout
   _mout=$(mise install --yes 2>&1) || abort "mise install failed: $_mout"
   if echo "$_mout" | grep -q "all tools are installed"; then
-    spin_skip "Runtimes up to date"
+    spin_skip "Runtimes already installed"
   else
     spin_ok "Runtimes installed"
   fi
@@ -274,7 +274,7 @@ cmd_sync() {
   local _uout
   _uout=$(mise upgrade --yes 2>&1) || abort "mise upgrade failed: $_uout"
   if echo "$_uout" | grep -qi "up to date"; then
-    spin_skip "Runtimes up to date"
+    spin_skip "Runtimes already latest"
   else
     spin_ok "Runtimes upgraded"
   fi

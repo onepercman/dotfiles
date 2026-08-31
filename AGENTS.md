@@ -54,7 +54,7 @@ dotfiles/
 
 - Stow package dirs: lowercase
 - Scripts: `set -euo pipefail`, helpers: `ok/run/warn/abort/section/section_end/spin/spin_ok/spin_warn`
-- No banners, no prompts (except destructive ops in `sync.sh uninstall`)
+- No banners, no prompts (except destructive ops in `sync.sh uninstall`, and the nvim lockfile auto-commit confirmation in `sync.sh sync`)
 - Commit style: emoji prefix (`🚀 🐞 🔧 ♻️ 📝 🗑️ ⬆️`)
 
 ### 4. When adding features
