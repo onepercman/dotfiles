@@ -100,6 +100,9 @@ brew "shellcheck"
 # ffmpeg - Audio/video conversion and processing
 brew "ffmpeg"
 
+# hf - Hugging Face CLI (formerly huggingface-cli)
+brew "hf"
+
 # ── System Info ───────────────────────────────────────────────────────────────
 
 # btop - Resource monitor (CPU, memory, disks, network, processes)
