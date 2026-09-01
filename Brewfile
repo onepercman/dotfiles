@@ -97,6 +97,9 @@ brew "direnv"
 # shellcheck - Static analysis/linter for shell scripts (sync.sh, etc.)
 brew "shellcheck"
 
+# ffmpeg - Audio/video conversion and processing
+brew "ffmpeg"
+
 # ── System Info ───────────────────────────────────────────────────────────────
 
 # btop - Resource monitor (CPU, memory, disks, network, processes)
