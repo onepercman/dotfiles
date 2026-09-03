@@ -97,7 +97,7 @@ menubar {
 
     // "pill" (default): fully rounded ends. "rounded": a smaller, fixed
     // corner radius, more like an ordinary button.
-    shape "pill"
+    shape "rounded"
 
     // Uppercases the workspace name shown in the badge itself — not the
     // dropdown menu's item labels, which stay as-typed.
