@@ -24,6 +24,12 @@ brew "fd"
 # ripgrep - Fast recursive grep (used by snacks.nvim picker for live grep)
 brew "ripgrep"
 
+# fzf - Command-line fuzzy finder
+brew "fzf"
+
+# zoxide - Smarter cd that learns your habits
+brew "zoxide"
+
 # Mole - Mac cleanup and maintenance terminal tool
 brew "mole"
 

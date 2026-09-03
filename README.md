@@ -41,7 +41,7 @@ cd ~/Developer/dotfiles && ./sync.sh
 
 | Script | Description |
 |--------|-------------|
-| `./sync.sh` | Sync everything: Homebrew, dotfiles, runtimes, nvim plugins |
+| `./sync.sh` | Sync everything: Homebrew, dotfiles, runtimes, nvim/tmux plugins |
 | `./sync.sh bootstrap` | Fresh machine setup: Xcode CLI tools → clone → sync |
 | `./sync.sh uninstall` | Remove all dotfiles symlinks and zinit |
 

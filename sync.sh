@@ -245,6 +245,24 @@ cmd_sync() {
   for pkg in "${PACKAGES[@]}"; do stow_pkg "$pkg"; done
   section_end
 
+  # ── tmux plugins ──────────────────────────────────────────────────────────────
+  section "tmux plugins"
+  TPM_DIR="$HOME/.tmux/plugins/tpm"
+  if [[ ! -d "$TPM_DIR" ]]; then
+    spin "Cloning TPM"
+    git clone --quiet --depth 1 https://github.com/tmux-plugins/tpm "$TPM_DIR"
+    spin_ok "TPM cloned"
+  else
+    skip "TPM"
+  fi
+  spin "Installing plugins"
+  if "$TPM_DIR/bin/install_plugins" &>/dev/null; then
+    spin_ok "Plugins synced"
+  else
+    spin_warn "Plugin install failed"
+  fi
+  section_end
+
   # ── shell ─────────────────────────────────────────────────────────────────────
   section "Shell"
   ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/zinit.git"
