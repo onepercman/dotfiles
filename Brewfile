@@ -56,6 +56,11 @@ brew "tmux"
 cask "itsdezen/tap/fantasque-sans-mono-nerdfont"
 cask "font-maple-mono-nf"
 
+# ── Browser ───────────────────────────────────────────────────────────────────
+
+# Google Chrome - Web browser
+cask "google-chrome"
+
 # ── AI Coding Agents ──────────────────────────────────────────────────────────
 
 # Claude Code - Anthropic's terminal-based AI coding assistant
