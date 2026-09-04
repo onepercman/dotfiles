@@ -3,6 +3,7 @@
 node = "lts"
 bun = "latest"
 pnpm = "latest"
+"npm:cloakbrowser" = "latest"
 
 # Python
 python = "latest"
