@@ -31,8 +31,7 @@ dotfiles/
 ├── tmux/         → ~/.tmux.conf
 ├── claude/       → ~/.claude/settings.json
 ├── herdr/        → ~/.config/herdr/config.toml
-├── opencode/     → ~/.config/opencode/opencode.jsonc, ~/.config/opencode/tui.json
-└── codex/        → ~/.codex/config.toml
+└── opencode/     → ~/.config/opencode/opencode.jsonc, ~/.config/opencode/tui.json
 ```
 
 ---

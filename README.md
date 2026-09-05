@@ -62,7 +62,6 @@ cd ~/Developer/dotfiles && ./sync.sh
 | `claude` | `~/.claude/settings.json` |
 | `herdr` | `~/.config/herdr/config.toml` |
 | `opencode` | `~/.config/opencode/opencode.jsonc`, `~/.config/opencode/tui.json` |
-| `codex` | `~/.codex/config.toml` |
 
 ## Highlights
 
