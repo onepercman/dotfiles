@@ -6,9 +6,19 @@
 // means a section that "does nothing" after a reload is worth
 // double-checking for a typo in its name.
 
+// Layout a newly-created workspace's first two windows start in —
+// "tiles" (default) or "accordion". Per-workspace `layout=` below
+// overrides this just for that workspace.
+default-layout "tiles"
+
 workspaces {
     workspace "work"
-    workspace "entertain"
+
+    // Overrides `default-layout` for this workspace only — its first
+    // container is created as Accordion instead of Tiles. Only affects
+    // future windows; doesn't relayout ones already tiled.
+    workspace "entertain" layout="accordion"
+
     workspace "random"
 
     // Workspace names are arbitrary strings — nothing stops you from
@@ -28,7 +38,9 @@ gaps {
     outer 8 16 16 16
 
     // Overrides `outer` when a workspace has exactly one tile (floating
-    // windows don't count). Same CSS shorthand as `outer`.
+    // windows don't count) — e.g. wider breathing room for a single
+    // full-screen-ish window. Unset (default) just falls back to `outer`,
+    // so leaving this out changes nothing. Same 1- or 4-value CSS shorthand.
     outer-solo 16 64 32 64
 
     // How many points of a non-visible accordion sibling peek out from
@@ -68,6 +80,14 @@ settings {
     // its second window: "auto" (derive from the monitor's aspect ratio),
     // "horizontal", or "vertical".
     default-root-orientation "auto"
+
+    // Weight-space grid a mouse-drag tile resize (dragging a tiled
+    // window's real edge/corner) snaps its result to, so the released
+    // size always matches what some whole number of `resize
+    // <mouse-resize-step>` keypresses would produce — same unit as the
+    // `resize` command below. Matches this file's own keyboard step by
+    // default.
+    mouse-resize-step 0.1
 
     // Eases tiled relayout and floating placement into their new frame
     // instead of jumping straight there. Accepts #true, #false, "medium",
